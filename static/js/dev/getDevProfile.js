@@ -1,5 +1,7 @@
+import BASE_URL from "../BASE_URL";
+
 async function getDevProfile() {
-  const URL = `http://127.0.0.1:5000/get_dev_profile`;
+  const URL = `${BASE_URL}/get_dev_profile`;
   const settings = {
     method: "GET",
     headers: {

@@ -1,3 +1,4 @@
+import BASE_URL from "../BASE_URL";
 const qSelector = (query) => document.querySelector(query);
 const qSAll = (query) => document.querySelectorAll(query);
 
@@ -143,7 +144,7 @@ function singUp(e) {
 }
 
 async function createDev(formObj) {
-  const URL = `http://127.0.0.1:5000/signup`;
+  const URL = `${BASE_URL}/signup`;
   const settings = {
     method: "POST",
     body: formObj,

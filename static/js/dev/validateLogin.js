@@ -1,3 +1,4 @@
+import BASE_URL from "../BASE_URL";
 const qSelector = (query) => document.querySelector(query);
 const qSAll = (query) => document.querySelectorAll(query);
 
@@ -52,7 +53,7 @@ function logIn(e) {
 }
 
 async function logInDev(formObj) {
-  const URL = `http://127.0.0.1:5000/login`;
+  const URL = `${BASE_URL}/login`;
   const settings = {
     method: "POST",
     body: formObj,

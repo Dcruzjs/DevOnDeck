@@ -1,3 +1,5 @@
+import BASE_URL from "../BASE_URL";
+
 const qSelector = (query) => document.querySelector(query);
 const qSAll = (query) => document.querySelectorAll(query);
 
@@ -100,7 +102,7 @@ function singUp(e) {
 }
 
 async function createComp(formObj) {
-  const URL = `http://127.0.0.1:5000/signup_comp`;
+  const URL = `${BASE_URL}/signup_comp`;
   const settings = {
     method: "POST",
     body: formObj,

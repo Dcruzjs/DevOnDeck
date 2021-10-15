@@ -1,3 +1,5 @@
+import BASE_URL from "../BASE_URL";
+
 const form = document.querySelector("#signup_form");
 form.addEventListener("submit", updateComp);
 
@@ -73,7 +75,7 @@ function updateComp(e) {
 }
 
 async function updateComp(formObj) {
-  const URL = `http://127.0.0.1:5000/update_comp_profile`;
+  const URL = `${BASE_URL}/update_comp_profile`;
   const settings = {
     method: "POST",
     headers: {

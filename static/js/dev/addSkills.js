@@ -1,5 +1,7 @@
+import BASE_URL from "../BASE_URL";
+
 async function addSkills(skills) {
-  const URL = `http://127.0.0.1:5000/add_dev_skills`;
+  const URL = `${BASE_URL}/add_dev_skills`;
   const settings = {
     method: "POST",
     headers: {

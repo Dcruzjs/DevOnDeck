@@ -1,7 +1,9 @@
+import BASE_URL from "../BASE_URL";
+
 const qSelector = (query) => document.querySelector(query);
 
 async function getCompProfile() {
-  const URL = `http://127.0.0.1:5000/get_comp_profile`;
+  const URL = `${BASE_URL}/get_comp_profile`;
   const settings = {
     method: "GET",
     headers: {
@@ -39,7 +41,7 @@ deleteForm.addEventListener("click", deleteDev);
 async function deleteDev(e) {
   e.preventDefault();
 
-  const URL = `http://127.0.0.1:5000/delete_dev_account`;
+  const URL = `${BASE_URL}/delete_dev_account`;
   const settings = {
     method: "POST",
     headers: {

@@ -1,5 +1,5 @@
 import addSkills from "./addSkills.js";
-
+import BASE_URL from "../BASE_URL.js";
 const qSelector = (query) => document.querySelector(query);
 const qSAll = (query) => document.querySelectorAll(query);
 
@@ -42,7 +42,7 @@ async function getSkills() {
   let skills = null;
   const skillsContainer = qSelector(".skills_container");
   try {
-    const response = await fetch("http://127.0.0.1:5000/get_skills");
+    const response = await fetch("${BASE_URL}/get_skills");
     // console.log("RESPONSE", response);
     if (response.ok) skills = await response.json();
     // console.log("SKILLS", skills);

@@ -1,3 +1,4 @@
+import BASE_URL from "../BASE_URL";
 const qSelector = (query) => document.querySelector(query);
 const qSAll = (query) => document.querySelectorAll(query);
 
@@ -116,7 +117,7 @@ function upDate(e) {
 }
 
 async function updateDev(formObj) {
-  const URL = `http://127.0.0.1:5000/update_dev_profile`;
+  const URL = `${BASE_URL}/update_dev_profile`;
   const settings = {
     method: "POST",
     headers: {
